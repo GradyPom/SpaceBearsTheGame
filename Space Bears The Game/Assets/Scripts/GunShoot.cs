@@ -21,7 +21,7 @@ public class GunShoot : MonoBehaviour
 
     private void OnMouseDown()
     {
-        pos = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z + 1);
+        pos = new Vector3(transform.position.x - 1, transform.position.y + 0.2f, transform.position.z + 1);
         Instantiate(laserPrefab, pos, transform.rotation);
     }
 }

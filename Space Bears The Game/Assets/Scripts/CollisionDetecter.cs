@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserMove : MonoBehaviour
+public class CollisionDetecter : MonoBehaviour
 {
-    public float speed = 20;
+    public GameManager gm;
+    private float damageDone = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -15,15 +16,15 @@ public class LaserMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bear"))
+        if (other.CompareTag("Player") && damageDone == 0)
         {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            gm.LoseHealth();
+            damageDone = 1;
         }
     }
 }

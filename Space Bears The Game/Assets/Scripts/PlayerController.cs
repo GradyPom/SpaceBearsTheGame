@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour
     {
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+        //transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+        //transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         playerBody.Rotate(Vector3.up * mouseX);
