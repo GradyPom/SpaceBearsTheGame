@@ -23,7 +23,7 @@ public class RemoteLaserTrigger : MonoBehaviour
 
     private void OnMouseDown()
     {
-        pos = new Vector3(laserGun.transform.position.x, laserGun.transform.position.y + 0.2f, laserGun.transform.position.z + 1);
+        pos = new Vector3(laserGun.transform.position.x + 0.5f, laserGun.transform.position.y + 0.2f, laserGun.transform.position.z + 1);
         Instantiate(laserPrefab, pos, laserGun.transform.rotation);
     }
 }

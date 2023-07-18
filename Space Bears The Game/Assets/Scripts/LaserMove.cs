@@ -17,13 +17,4 @@ public class LaserMove : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Bear"))
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-        }
-    }
 }
