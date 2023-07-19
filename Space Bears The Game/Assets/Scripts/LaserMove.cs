@@ -5,6 +5,8 @@ using UnityEngine;
 public class LaserMove : MonoBehaviour
 {
     public float speed = 20;
+    public float laserStrength = 10f;
+    public float laserCooldown = 1;
 
     // Start is called before the first frame update
     void Start()

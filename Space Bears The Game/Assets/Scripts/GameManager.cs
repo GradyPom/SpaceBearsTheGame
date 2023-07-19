@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         health = 10;
         points = 0;
         damageDone = 0;
+        StartGame();
     }
 
     public void StartGame()
@@ -33,6 +34,18 @@ public class GameManager : MonoBehaviour
         if(health <= 0)
         {
             isGameActive = false;
+        }
+        print(points);
+
+        //DELETE WHEN TITLE SCREEN IS ACTIVE
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            isGameActive = true;
+        }
+        //DELETE WHEN THERE ARE ENOUGH BEARS TO TEST
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            points += 10;
         }
     }
 

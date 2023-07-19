@@ -10,17 +10,20 @@ public class CollisionDetecter : MonoBehaviour
     public GameManager gm;
     private float damageDone = 0;
     public float health = 20;
+    public float value = 1;
+    public GameObject laserPrefab;
+    public float laserStrength;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        laserStrength = laserPrefab.GetComponent<LaserMove>().laserStrength;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        laserStrength = laserPrefab.GetComponent<LaserMove>().laserStrength;
     }
 
     void OnTriggerEnter(Collider other)
@@ -34,7 +37,7 @@ public class CollisionDetecter : MonoBehaviour
         else if (other.CompareTag("Laser"))
         {
             Destroy(other.gameObject);
-            health -= 10;
+            health -= laserStrength;
 
             if (health <= 0)
             {
@@ -61,6 +64,7 @@ public class CollisionDetecter : MonoBehaviour
     IEnumerator DeathAnimation()
     {
         yield return new WaitForSeconds(5);
+        gm.GetComponent<GameManager>().points += value;
         Destroy(gameObject);
     }
 }
