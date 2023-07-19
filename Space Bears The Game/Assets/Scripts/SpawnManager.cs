@@ -17,6 +17,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics.bounceThreshold = 2;
+
         currentWaveCD = waveCD;
     }
 
