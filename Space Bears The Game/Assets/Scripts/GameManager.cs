@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
     private int damageDone = 0;
     public bool isGameActive;
     public float points;
+    public TextMeshProUGUI pointsText;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,7 @@ public class GameManager : MonoBehaviour
         {
             lifeBar[i].gameObject.SetActive(true);
         }
-        isGameActive = false;
+        isGameActive = true;
     }
 
     // Update is called once per frame
@@ -34,19 +37,16 @@ public class GameManager : MonoBehaviour
         if(health <= 0)
         {
             isGameActive = false;
+            player.GetComponent<PlayerMovement>().deathStatus = true;
         }
-        print(points);
 
-        //DELETE WHEN TITLE SCREEN IS ACTIVE
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            isGameActive = true;
-        }
         //DELETE WHEN THERE ARE ENOUGH BEARS TO TEST
         if (Input.GetKeyDown(KeyCode.V))
         {
             points += 10;
         }
+
+        pointsText.text = "Points: " + points;
     }
 
     public void LoseHealth()
