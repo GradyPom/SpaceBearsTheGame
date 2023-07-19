@@ -18,16 +18,16 @@ public class GunShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftShift) && !zoom)
-        {
-            transform.position = new Vector3(0.016f + player.transform.position.x, player.transform.position.y, player.transform.position.z);
-            zoom = true;
-        }
-        else if(Input.GetKeyDown(KeyCode.LeftShift) && zoom)
-        {
-            transform.position = new Vector3(0.421f + player.transform.position.x, player.transform.position.y, .8500004f + player.transform.position.z);
-            zoom = false;
-        }
+        //if(Input.GetKeyDown(KeyCode.LeftShift) && !zoom)
+        //{
+        //    transform.position = new Vector3(0.016f + player.transform.position.x, player.transform.position.y, player.transform.position.z);
+        //    zoom = true;
+        //}
+        //else if(Input.GetKeyDown(KeyCode.LeftShift) && zoom)
+        //{
+        //    transform.position = new Vector3(0.421f + player.transform.position.x, player.transform.position.y, .8500004f + player.transform.position.z);
+        //    zoom = false;
+        //}
     }
 
     private void OnMouseDown()

@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 12;
+    public float speed = 8;
     Vector3 velocity;
     public float gravity = -9.81f;
     public GameManager gm;
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public bool upgradeScreenOpen = false;
     public GameObject inGameUI;
     public GameObject laser;
+    public bool deathStatus = false;
+    //public GameObject death;
     //public bool isOnGround;
     //public float jumpForce = 20;
     //public Rigidbody playerRb;
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         //playerRb = GetComponent<Rigidbody>();
         upgradeScreen.SetActive(false);
         inGameUI.SetActive(false);
+        //death.SetActive(false);
     }
 
     // Update is called once per frame
@@ -67,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         {
             upgradeScreen.SetActive(false);
             inGameUI.SetActive(true);
+            gm.GetComponent<GameManager>().isGameActive = true;
         }
 
         if (gm.isGameActive)
@@ -78,24 +83,36 @@ public class PlayerMovement : MonoBehaviour
             inGameUI.SetActive(false);
         }
 
-        if(upgradeScreenOpen == true)
+        if (upgradeScreenOpen == true)
         {
-            if(Input.GetKeyDown(KeyCode.B))
+            if(Input.GetKeyDown(KeyCode.B) && gm.GetComponent<GameManager>().points >= 10)
             {
                 gm.GetComponent<GameManager>().points -= 10;
-                laser.GetComponent<LaserMove>().laserStrength += 10;
+                laser.GetComponent<LaserMove>().laserStrength += 2;
             }
-            else if (Input.GetKeyDown(KeyCode.E))
+            else if (Input.GetKeyDown(KeyCode.E) && gm.GetComponent<GameManager>().points >= 10)
             {
                 gm.GetComponent<GameManager>().points -= 10;
                 laser.GetComponent<LaserMove>().laserCooldown -= 0.2f;
             }
-            else if (Input.GetKeyDown(KeyCode.R))
+            else if (Input.GetKeyDown(KeyCode.R) && gm.GetComponent<GameManager>().points >= 10)
             {
                 gm.GetComponent<GameManager>().points -= 10;
                 speed += 2;
             }
         }
+
+        if(deathStatus)
+        {
+            PlayerDie();
+        }
+    }
+
+    public void PlayerDie()
+    {
+        //death.SetActive(true);
+        //DONT DELETE THIS
+        //SceneManager.LoadScene("Death");
     }
 
     //private void OnCollisonEnter(Collision collsion)
