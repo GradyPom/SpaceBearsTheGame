@@ -519,6 +519,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2802358790453976492}
   - component: {fileID: 8071530993201055702}
+  - component: {fileID: 5859502549179564140}
+  - component: {fileID: -6017717238174904799}
   - component: {fileID: 2011584956118811518}
   - component: {fileID: 4412968580128880769}
   - component: {fileID: 7180187548775919709}
@@ -567,6 +569,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5859502549179564140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289926619770357526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f52abd4ed3f814fa0effc5fd67ac5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserGun: {fileID: 0}
+  pos: {x: 0, y: 0, z: 0}
+  laserPrefab: {fileID: 0}
+  cooldown: 0
+  laserShot: 0
+  player: {fileID: 0}
+  shootPoint: {fileID: 0}
+--- !u!114 &-6017717238174904799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289926619770357526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b5f337a158de24ba42ba57212441c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  health: 20
+  value: 1
+  laserPrefab: {fileID: 0}
+  laserStrength: 0
 --- !u!54 &2011584956118811518
 Rigidbody:
   m_ObjectHideFlags: 0
