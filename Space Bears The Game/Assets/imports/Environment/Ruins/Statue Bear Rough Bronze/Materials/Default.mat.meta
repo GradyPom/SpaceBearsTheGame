@@ -1,15 +1,11 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: beb507c46c6118641a0c12d8e56f45c4
-=======
 <<<<<<<< HEAD:Space Bears The Game/Assets/New Material.mat.meta
-guid: 74d03121d23d1f341aa0bb97a2e03c9c
+guid: af676be878eb4c94a9a3e372b22f54c8
 ========
 guid: b8b5cb3fbc88e6449bccd8c919c4ffae
 timeCreated: 1466962373
 licenseType: Store
 >>>>>>>> 8fb6481d4f31640f32c38829563fde046d3544ce:Space Bears The Game/Assets/imports/Environment/Ruins/Statue Bear Rough Bronze/Materials/Default.mat.meta
->>>>>>> Stashed changes
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
