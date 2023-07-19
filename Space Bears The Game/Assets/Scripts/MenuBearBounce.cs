@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuBearBounce : MonoBehaviour
 {
@@ -21,5 +22,10 @@ public class MenuBearBounce : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = rb.velocity.normalized * speed;
+    }
+
+    private void OnMouseDown()
+    {
+        SceneManager.LoadScene("Game");
     }
 }
