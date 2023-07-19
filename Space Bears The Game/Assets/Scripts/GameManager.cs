@@ -7,17 +7,24 @@ public class GameManager : MonoBehaviour
     public int health;
     public GameObject[] lifeBar;
     private int damageDone = 0;
-    public bool gameOver;
+    public bool isGameActive;
+    public float points;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 10;
-        for(int i = 0; i < 10; i++)
+        points = 0;
+        damageDone = 0;
+    }
+
+    public void StartGame()
+    {
+        for (int i = 0; i < 10; i++)
         {
             lifeBar[i].gameObject.SetActive(true);
         }
-        gameOver = false;
+        isGameActive = false;
     }
 
     // Update is called once per frame
@@ -25,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         if(health <= 0)
         {
-            gameOver = true;
+            isGameActive = false;
         }
     }
 
