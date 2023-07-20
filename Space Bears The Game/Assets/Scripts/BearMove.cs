@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class BearMove : MonoBehaviour
 {
 
-    public Transform Player;
+    public Transform player;
     int speed = 12;
     int MinDist = 2;
     public CharacterController controller;
@@ -15,7 +15,7 @@ public class BearMove : MonoBehaviour
 
     void Start()
     {
-
+        //player = GameObject.Find("Player Body");
     }
 
     void Update()
@@ -23,13 +23,13 @@ public class BearMove : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        if (Vector3.Distance(transform.position, player.position) >= MinDist)
         {
             if (bear.GetComponent<CollisionDetecter>().runAnimationHolder == 0)
             {
                 GetComponent<Animator>().SetBool("Run Forward", true);
                 transform.position += transform.forward * speed * Time.deltaTime;
-                transform.LookAt(Player);
+                transform.LookAt(player);
             }
             else
             {

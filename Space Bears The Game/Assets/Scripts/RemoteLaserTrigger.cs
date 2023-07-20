@@ -13,11 +13,15 @@ public class RemoteLaserTrigger : MonoBehaviour
     public float laserShot = 0;
     public GameObject player;
     public Transform shootPoint;
+    public GameObject shoot;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        laserGun = GameObject.Find("Laser Gun");
+        shoot = GameObject.Find("Shoot Point");
+        //shootPoint = shoot.transform.position;
+        player = GameObject.Find("player");
     }
 
     // Update is called once per frame

@@ -21,6 +21,7 @@ public class CollisionDetecter : MonoBehaviour
     {
         laserStrength = laserPrefab.GetComponent<LaserMove>().laserStrength;
         runAnimationHolder = 0;
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
