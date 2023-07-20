@@ -1827,6 +1827,7 @@ MonoBehaviour:
   laserShot: 0
   player: {fileID: 0}
   shootPoint: {fileID: 0}
+  shoot: {fileID: 0}
 --- !u!114 &2453350716287686536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,7 +1840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0ae01f6d7069145bdb5bcfdf5c6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  player: {fileID: 0}
   controller: {fileID: 4497140980650272891}
   gravity: -9.81
   bear: {fileID: 2453350716287686541}
@@ -1882,7 +1883,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2453350716287686541}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.4424481, y: 1.7141681, z: 2.4103367}

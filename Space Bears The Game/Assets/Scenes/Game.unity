@@ -236,7 +236,7 @@ MonoBehaviour:
   - {fileID: 268177930}
   - {fileID: 1896238954}
   bearBrown: {fileID: 706222839822680995, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-  bearBlack: {fileID: 2802972338974426212, guid: 4a3719c53a378bb44839759f7946b4bc, type: 3}
+  bearBlack: {fileID: 2453350716287686541, guid: 4a3719c53a378bb44839759f7946b4bc, type: 3}
   bearPolar: {fileID: 8863418984768501289, guid: 1329f95ac7705d64c9229f2bbac3d21c, type: 3}
   waveNumber: 0
   livingBears: 0
@@ -1560,6 +1560,7 @@ MonoBehaviour:
   laserShot: 0
   player: {fileID: 974262685}
   shootPoint: {fileID: 844989369}
+  shoot: {fileID: 0}
 --- !u!1001 &774296972
 PrefabInstance:
   m_ObjectHideFlags: 0

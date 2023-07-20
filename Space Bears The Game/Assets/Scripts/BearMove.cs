@@ -15,7 +15,7 @@ public class BearMove : MonoBehaviour
 
     void Start()
     {
-        //player = GameObject.Find("Player Body");
+        player = GameObject.Find("Player Body").transform;
     }
 
     void Update()
