@@ -47,6 +47,6 @@ public class MenuBearBounce : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("CutScene");
     }
 }
