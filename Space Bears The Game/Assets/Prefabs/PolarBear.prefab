@@ -2137,11 +2137,11 @@ GameObject:
   - component: {fileID: 8091526210173283475}
   - component: {fileID: 2786264595572586217}
   - component: {fileID: 845378027796199277}
-  - component: {fileID: 6319917506930772264}
   - component: {fileID: -8981165722357104264}
   - component: {fileID: 3167126537129270788}
   - component: {fileID: 2079471209168609519}
   - component: {fileID: -2114945667892252507}
+  - component: {fileID: 802645478727396917}
   m_Layer: 0
   m_Name: PolarBear
   m_TagString: Untagged
@@ -2199,23 +2199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0ae01f6d7069145bdb5bcfdf5c6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
---- !u!54 &6319917506930772264
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8863418984768501289}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  player: {fileID: 0}
+  controller: {fileID: 802645478727396917}
+  gravity: -9.81
+  bear: {fileID: 8863418984768501289}
 --- !u!114 &-8981165722357104264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,6 +2234,7 @@ MonoBehaviour:
   laserShot: 0
   player: {fileID: 0}
   shootPoint: {fileID: 0}
+  shoot: {fileID: 0}
 --- !u!65 &2079471209168609519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2255,7 +2243,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8863418984768501289}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5412654, y: 1.8948436, z: 2.7683706}
@@ -2277,6 +2265,26 @@ MonoBehaviour:
   value: 1
   laserPrefab: {fileID: 8357108402137456105, guid: 4207a279fb030fc409a8d313c3f0fed3, type: 3}
   laserStrength: 0
+  attackAnimation: 0
+  runAnimationHolder: 0
+--- !u!143 &802645478727396917
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8863418984768501289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 1
+  m_SlopeLimit: 45
+  m_StepOffset: 0.7
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1 &8995298738841575306
 GameObject:
   m_ObjectHideFlags: 0
