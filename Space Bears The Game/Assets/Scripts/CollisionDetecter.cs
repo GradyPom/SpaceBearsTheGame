@@ -13,11 +13,14 @@ public class CollisionDetecter : MonoBehaviour
     public float value = 1;
     public GameObject laserPrefab;
     public float laserStrength;
+    public float attackAnimation;
+    public float runAnimationHolder;
 
     // Start is called before the first frame update
     void Start()
     {
         laserStrength = laserPrefab.GetComponent<LaserMove>().laserStrength;
+        runAnimationHolder = 0;
     }
 
     // Update is called once per frame
@@ -30,6 +33,23 @@ public class CollisionDetecter : MonoBehaviour
     {
         if (other.CompareTag("Player") && damageDone == 0)
         {
+            attackAnimation = Random.Range(1, 5);
+            if(attackAnimation == 4)
+            {
+                GetComponent<Animator>().SetBool("Attack5", true);
+            }
+            else if(attackAnimation == 3)
+            {
+                GetComponent<Animator>().SetBool("Attack3", true);
+            }
+            else if (attackAnimation == 2)
+            {
+                GetComponent<Animator>().SetBool("Attack2", true);
+            }
+            else if (attackAnimation == 1)
+            {
+                GetComponent<Animator>().SetBool("Attack1", true);
+            }
             gm.LoseHealth();
             StartCoroutine(RechargeTime());
             damageDone = 1;
@@ -38,7 +58,7 @@ public class CollisionDetecter : MonoBehaviour
         {
             Destroy(other.gameObject);
             health -= laserStrength;
-
+            runAnimationHolder = 1;
             if (health <= 0)
             {
                 GetComponent<Animator>().SetBool("Death", true);
@@ -53,13 +73,15 @@ public class CollisionDetecter : MonoBehaviour
     }
     IEnumerator RechargeTime()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         damageDone = 0;
+        runAnimationHolder = 0;
     }
 
     IEnumerator HitAnimation()
     {
         yield return new WaitForSeconds(0.5f);
+        runAnimationHolder = 0;
     }
     IEnumerator DeathAnimation()
     {

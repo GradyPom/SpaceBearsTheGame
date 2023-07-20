@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: f0da6b98c060383448c3c4bdd822bb5d
+  - enabled: 1
+    path: Assets/Scenes/GradyDev.unity
+    guid: 63c28a29b17e70d4e9425d46bfe137f9
   m_configObjects: {}
