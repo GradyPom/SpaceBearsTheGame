@@ -108,35 +108,12 @@ public class PlayerMovement : MonoBehaviour
         {
             eText.text = "Fire Rate 4-Increases the player's fire rate a little-40 points";
         }
-        else if(e == 5)
-        {
-            eText.text = "Fire Rate 5-Increases the player's fire rate a little-50 points";
-        }
         else
         {
             eText.text = "Fire Rate Maxed";
         }
 
-        if (r == 1)
-        {
-            rText.text = "Speed 1-Increases the player's speed a little-10 points";
-        }
-        else if (r == 2)
-        {
-            rText.text = "Speed 2-Increases the player's speed a little-20 points";
-        }
-        else if (r == 3)
-        {
-            rText.text = "Speed 3-Increases the player's speed a little-30 points";
-        }
-        else if (r == 4)
-        {
-            rText.text = "Speed 4-Increases the player's speed a little-40 points";
-        }
-        else if (r == 5)
-        {
-            rText.text = "Speed 5-Increases the player's speed a little-50 points";
-        }
+        rText.text = "Speed " + r + "-Increases the player's speed a little-" + r + "0 points";
 
         if (gm.GetComponent<GameManager>().isGameActive && upgradeScreenOpen == true)
         {
