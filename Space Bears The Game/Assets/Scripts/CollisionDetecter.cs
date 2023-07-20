@@ -64,6 +64,7 @@ public class CollisionDetecter : MonoBehaviour
             {
                 GetComponent<Animator>().SetBool("Death", true);
                 StartCoroutine(DeathAnimation());
+                FindObjectOfType<SpawnManager>().livingBears--;
             }
             else
             {
