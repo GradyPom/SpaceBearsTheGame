@@ -176,5 +176,43 @@ public class SpawnManager : MonoBehaviour
                 Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
         }
+        else if (num == 12)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 12)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
     }
 }   

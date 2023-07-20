@@ -14,10 +14,12 @@ public class RemoteLaserTrigger : MonoBehaviour
     public GameObject player;
     public Transform shootPoint;
     public GameObject shoot;
+    //public ParticleSystem gunParticle;
 
     // Start is called before the first frame update
     void Start()
     {
+        //gunParticle.Stop();
         laserGun = GameObject.Find("Player Body/Main Camera/Laser Gun");
         shoot = GameObject.Find("Player Body/Main Camera/Laser Gun/Shoot Point");
         shootPoint = GameObject.Find("Player Body/Main Camera/Laser Gun/Shoot Point").transform;
@@ -38,6 +40,7 @@ public class RemoteLaserTrigger : MonoBehaviour
             //pos = new Vector3(laserGun.transform.position.x, laserGun.transform.position.y, laserGun.transform.position.z + 1);
             pos = new Vector3(shootPoint.transform.position.x, shootPoint.transform.position.y, shootPoint.transform.position.z);
             Instantiate(laserPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+            //gunParticle.Play();
             StartCoroutine(LaserCooldown());
             //else if (player.transform.rotation.y < 0)
             //{
@@ -50,6 +53,7 @@ public class RemoteLaserTrigger : MonoBehaviour
         {
             pos = new Vector3(laserGun.transform.position.x, laserGun.transform.position.y, laserGun.transform.position.z + 0.8f);
             Instantiate(laserPrefab, shootPoint.transform.position, laserGun.transform.rotation);
+            //gunParticle.Play();
             StartCoroutine(LaserCooldown());
         }
     }
@@ -59,5 +63,6 @@ public class RemoteLaserTrigger : MonoBehaviour
         laserShot = 1;
         yield return new WaitForSeconds(cooldown);
         laserShot = 0;
+        //gunParticle.Stop();
     }
 }
