@@ -48,12 +48,6 @@ public class GameManager : MonoBehaviour
             player.GetComponent<PlayerMovement>().deathStatus = true;
         }
 
-        //DELETE WHEN THERE ARE ENOUGH BEARS TO TEST
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            points += 10;
-        }
-
         pointsText.text = "Points: " + points;
     }
 
