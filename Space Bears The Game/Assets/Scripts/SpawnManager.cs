@@ -11,7 +11,9 @@ public class SpawnManager : MonoBehaviour
     public GameObject bearBlue;
     public GameObject bearGhost;
     public GameObject bearCyborg;
+    public GameObject bearGold;
     public GameManager gm;
+    public GameObject bossSpawn;
 
     public int waveNumber = 0;
     public int livingBears = 0;
@@ -25,6 +27,7 @@ public class SpawnManager : MonoBehaviour
 
         currentWaveCD = waveCD;
         gm = FindObjectOfType<GameManager>();
+        bossSpawn = GameObject.Find("Boss Spawn Loctaion");
     }
 
     // Update is called once per frame
@@ -330,6 +333,159 @@ public class SpawnManager : MonoBehaviour
             for (int i = 1; i <= 4; i++)
             {
                 Instantiate(bearGhost, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 19)
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearGhost, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 20)
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearGhost, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 21)
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 4; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 4; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 4; i++)
+            {
+                Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 4; i++)
+            {
+                Instantiate(bearGhost, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 4; i++)
+            {
+                Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 22)
+        {
+            for (int i = 1; i <= 20; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearGhost, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 23)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearGhost, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 10; i++)
+            {
+                Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 24)
+        {
+            for (int i = 1; i <= 20; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearGhost, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 15; i++)
+            {
+                Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 25)
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearGold, bossSpawn.transform.position, bearBlack.transform.rotation);
             }
         }
     }
