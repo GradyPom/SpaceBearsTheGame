@@ -1102,6 +1102,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c124bcb1a14e7054b8c99e402a20ee07, type: 3}
+--- !u!1 &332261021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 225915130694829039, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
+  m_PrefabInstance: {fileID: 575110146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &355249752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +1675,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539615064}
   m_Mesh: {fileID: 4300018, guid: 71ff0e77341aa304c921a48a639924b6, type: 3}
+--- !u!1 &570658617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4269102623398358217, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
+  m_PrefabInstance: {fileID: 575110146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &570658618 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4269102623398358198, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
+  m_PrefabInstance: {fileID: 575110146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &572357213
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4911,6 +4926,7 @@ GameObject:
   - component: {fileID: 1317868195}
   - component: {fileID: 1317868197}
   - component: {fileID: 1317868196}
+  - component: {fileID: 1317868198}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Ground
@@ -4978,6 +4994,26 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!114 &1317868198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317868194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f52abd4ed3f814fa0effc5fd67ac5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserGun: {fileID: 332261021}
+  pos: {x: 0, y: 0, z: 0}
+  laserPrefab: {fileID: 8357108402137456105, guid: 4207a279fb030fc409a8d313c3f0fed3, type: 3}
+  cooldown: 0
+  laserShot: 0
+  player: {fileID: 974262685}
+  shootPoint: {fileID: 570658618}
+  shoot: {fileID: 570658617}
 --- !u!1 &1356125681
 GameObject:
   m_ObjectHideFlags: 0
