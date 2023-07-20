@@ -13,6 +13,10 @@ public class MenuBearBounce : MonoBehaviour
     public bool moved = false;
     public float cd = 1;
 
+    public AudioSource camAudio;
+    public AudioSource bearAudio;
+    public bool clicked = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,11 @@ public class MenuBearBounce : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(!bearAudio.isPlaying && !camAudio.isPlaying)
+        {
+            SceneManager.LoadScene("CutScene");
+        }
+
         rb.velocity = rb.velocity.normalized * speed;
 
         if (move && !moved)
@@ -47,6 +56,14 @@ public class MenuBearBounce : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("CutScene");
+        if (!clicked)
+        {
+            clicked = true;
+            bearAudio.Play();
+            camAudio.Stop();
+            rb.velocity = new Vector3(0,0,0);
+        }
+
+
     }
 }
