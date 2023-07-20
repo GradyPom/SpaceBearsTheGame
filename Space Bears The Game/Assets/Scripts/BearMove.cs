@@ -6,7 +6,7 @@ public class BearMove : MonoBehaviour
 {
 
     public Transform player;
-    int speed = 12;
+    public int speed = 12;
     int MinDist = 2;
     public CharacterController controller;
     Vector3 velocity;

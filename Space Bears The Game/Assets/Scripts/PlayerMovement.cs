@@ -161,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.B) && gm.GetComponent<GameManager>().points >= (b * 10))
             {
                 gm.GetComponent<GameManager>().points -= (b * 10);
-                laser.GetComponent<LaserMove>().laserStrength += 2;
+                laser.GetComponent<LaserMove>().laserStrength += 5;
                 b += 1;
             }
             else if (Input.GetKeyDown(KeyCode.E) && gm.GetComponent<GameManager>().points >= (e * 10))

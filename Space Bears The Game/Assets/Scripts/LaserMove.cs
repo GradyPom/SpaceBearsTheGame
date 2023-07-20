@@ -43,4 +43,12 @@ public class LaserMove : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void OnCollisonEnter(Collider other)
+    {
+        if(!other.CompareTag("Bear"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
