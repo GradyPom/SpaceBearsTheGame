@@ -400,6 +400,16 @@ Transform:
   m_Father: {fileID: 2121709545}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &108696620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4269102624560505471, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
+  m_PrefabInstance: {fileID: 575110146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &108696621 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4269102624560505464, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
+  m_PrefabInstance: {fileID: 575110146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &119210212 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 756154898841012935, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}
@@ -3697,6 +3707,7 @@ GameObject:
   - component: {fileID: 899555643}
   - component: {fileID: 899555646}
   - component: {fileID: 899555645}
+  - component: {fileID: 899555647}
   - component: {fileID: 899555644}
   m_Layer: 0
   m_Name: Water
@@ -3783,6 +3794,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899555642}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &899555647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899555642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f52abd4ed3f814fa0effc5fd67ac5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserGun: {fileID: 332261021}
+  pos: {x: 0, y: 0, z: 0}
+  laserPrefab: {fileID: 8357108402137456105, guid: 4207a279fb030fc409a8d313c3f0fed3, type: 3}
+  cooldown: 0
+  laserShot: 0
+  player: {fileID: 974262685}
+  shootPoint: {fileID: 108696621}
+  shoot: {fileID: 108696620}
 --- !u!64 &914459797
 MeshCollider:
   m_ObjectHideFlags: 0
