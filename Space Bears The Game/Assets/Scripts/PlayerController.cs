@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
 
     private GameManager gm;
 
+    public float dist;
+    public GameObject[] bears;
+    public Transform[] bearPositions;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +41,31 @@ public class PlayerController : MonoBehaviour
         {
             gm.health = 0;
         }
+
+        bears = GameObject.FindGameObjectsWithTag("Bear");
+        bearPositions = new Transform[bears.Length];
+        for (int i = 0; i < bears.Length; i++)
+        {
+            bearPositions[i] = bears[i].transform;
+        }
+        GetClosestBear(bearPositions);
+    }
+
+    void GetClosestBear(Transform[] bears)
+    {
+        Transform bestTarget = null;
+        float closestDistanceSqr = Mathf.Infinity;
+        Vector3 currentPosition = transform.position;
+        foreach (Transform potentialTarget in bears)
+        {
+            Vector3 directionToTarget = potentialTarget.position - currentPosition;
+            float dSqrToTarget = directionToTarget.sqrMagnitude;
+            if (dSqrToTarget < closestDistanceSqr)
+            {
+                closestDistanceSqr = dSqrToTarget;
+                bestTarget = potentialTarget;
+            }
+        }
+        dist = Mathf.Round(Mathf.Sqrt(closestDistanceSqr));
     }
 }
