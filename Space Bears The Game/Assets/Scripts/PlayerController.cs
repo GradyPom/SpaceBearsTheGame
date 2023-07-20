@@ -11,11 +11,15 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 100;
     public Transform playerBody;
 
+    private GameManager gm;
+
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -28,5 +32,10 @@ public class PlayerController : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         playerBody.Rotate(Vector3.up * mouseX);
+
+        if(gameObject.transform.position.y <= 2.1)
+        {
+            gm.health = 0;
+        }
     }
 }

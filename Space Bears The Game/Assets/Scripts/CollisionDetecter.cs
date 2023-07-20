@@ -29,6 +29,16 @@ public class CollisionDetecter : MonoBehaviour
     void Update()
     {
         laserStrength = laserPrefab.GetComponent<LaserMove>().laserStrength;
+
+        if (gameObject.transform.position.y <= 1)
+        {
+            StartCoroutine(DeathAnimation());
+            if (count == 0)
+            {
+                FindObjectOfType<SpawnManager>().livingBears--;
+                count++;
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other)
