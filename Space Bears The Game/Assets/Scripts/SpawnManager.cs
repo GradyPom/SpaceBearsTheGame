@@ -51,31 +51,107 @@ public class SpawnManager : MonoBehaviour
                 Instantiate(bearBrown, spawnLocations[Random.Range(0,spawnLocations.Count)].transform.position,bearBlack.transform.rotation);
             }
         }
-
-        if (num == 2)
+        else if (num == 2)
         {
             for (int i = 1; i <= 3; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
         }
-        if (num == 3)
+        else if (num == 3)
         {
             for (int i = 1; i <= 5; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
         }
-
-        if (num == 4)
+        else if (num == 4)
         {
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
             for (int i = 1; i <= 1; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 5)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 6)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 7)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 8)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 9)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 4; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 2; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+        }
+        else if (num == 10)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
         }
     }
