@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
+  m_IndirectSpecularColor: {r: 0.043578748, g: 0.044726565, b: 0.059461884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1116,6 +1116,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c124bcb1a14e7054b8c99e402a20ee07, type: 3}
+--- !u!1 &320079415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 320079416}
+  m_Layer: 0
+  m_Name: Boss Spawn Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &320079416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320079415}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 221.7, y: 46, z: 148.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &332261021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 225915130694829039, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
@@ -1720,6 +1751,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4269102623877309872, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
+      propertyPath: laserPrefab
+      value: 
+      objectReference: {fileID: 5998837902287164984, guid: c96067b356105a3428101a672f2df3c2, type: 3}
     - target: {fileID: 4269102623877309875, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
       propertyPath: gm
       value: 
@@ -1732,6 +1767,10 @@ PrefabInstance:
       propertyPath: eText
       value: 
       objectReference: {fileID: 1554059838}
+    - target: {fileID: 4269102623877309875, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
+      propertyPath: laser
+      value: 
+      objectReference: {fileID: 5998837902287164984, guid: c96067b356105a3428101a672f2df3c2, type: 3}
     - target: {fileID: 4269102623877309875, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
       propertyPath: rText
       value: 
@@ -2997,7 +3036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 756154898385279059, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 756154898385279059, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3784,7 +3823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserGun: {fileID: 332261021}
   pos: {x: 0, y: 0, z: 0}
-  laserPrefab: {fileID: 8357108402137456105, guid: 4207a279fb030fc409a8d313c3f0fed3, type: 3}
+  laserPrefab: {fileID: 5998837902287164984, guid: c96067b356105a3428101a672f2df3c2, type: 3}
   cooldown: 0
   laserShot: 0
   player: {fileID: 974262685}
@@ -4705,7 +4744,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1265040526
 MeshCollider:
@@ -4889,9 +4928,9 @@ RectTransform:
   m_Father: {fileID: 2038721593}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -839, y: 457}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 118, y: -82}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316248515
@@ -5168,7 +5207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserGun: {fileID: 332261021}
   pos: {x: 0, y: 0, z: 0}
-  laserPrefab: {fileID: 8357108402137456105, guid: 4207a279fb030fc409a8d313c3f0fed3, type: 3}
+  laserPrefab: {fileID: 5998837902287164984, guid: c96067b356105a3428101a672f2df3c2, type: 3}
   cooldown: 0
   laserShot: 0
   player: {fileID: 974262685}
@@ -6373,63 +6412,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &1676694289
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -270.35132
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.0000047683716
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -405.1682
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 182062919596792089, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 706222839822680995, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
-      propertyPath: m_Name
-      value: BrownBear
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
 --- !u!1001 &1698597928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6455,7 +6437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1097297788396822200, guid: 35b483f97fa00d14dbaf8538e49556cc, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1097297788396822200, guid: 35b483f97fa00d14dbaf8538e49556cc, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8361,7 +8343,7 @@ Transform:
   - {fileID: 30564836}
   - {fileID: 1241836620}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072832708 stripped
 GameObject:
@@ -8656,7 +8638,9 @@ MonoBehaviour:
   bearBlue: {fileID: 0}
   bearGhost: {fileID: 0}
   bearCyborg: {fileID: 0}
+  bearGold: {fileID: 0}
   gm: {fileID: 0}
+  bossSpawn: {fileID: 0}
   waveNumber: 0
   livingBears: 0
   waveCD: 5
@@ -8694,7 +8678,7 @@ Transform:
   - {fileID: 1810764511}
   - {fileID: 1299879404}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2147002634
 PrefabInstance:
