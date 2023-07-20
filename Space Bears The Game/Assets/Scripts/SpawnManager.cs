@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject bearGold;
     public GameManager gm;
     public GameObject bossSpawn;
+    public TextMeshProUGUI waveNumText;
+    public float wave = 0;
 
     public int waveNumber = 0;
     public int livingBears = 0;
@@ -46,10 +49,13 @@ public class SpawnManager : MonoBehaviour
             }
 
         }
+
+        waveNumText.text = "Wave: " + wave;
     }
 
     void spawnWave(int num)
     {
+        wave = num;
         if (num == 1)
         {
             for (int i = 1 ; i <= 3; i++)
