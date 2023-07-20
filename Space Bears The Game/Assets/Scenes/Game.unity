@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 30564836}
   m_Layer: 0
   m_Name: Volcano
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -950,6 +950,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: afa34a8748c82294d8c76c0493fcdd59, type: 3}
       propertyPath: m_Name
       value: Spaceship
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: afa34a8748c82294d8c76c0493fcdd59, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: afa34a8748c82294d8c76c0493fcdd59, type: 3}
       propertyPath: m_RootOrder
@@ -1922,7 +1926,7 @@ GameObject:
   - component: {fileID: 609924008}
   m_Layer: 0
   m_Name: OceanFloor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3696,7 +3700,7 @@ GameObject:
   - component: {fileID: 899555644}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4234,7 +4238,7 @@ GameObject:
   - component: {fileID: 1047510218}
   m_Layer: 0
   m_Name: Ruins
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8431,6 +8435,7 @@ MonoBehaviour:
   bearBrown: {fileID: 706222839822680995, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
   bearBlack: {fileID: 2453350716287686541, guid: 4a3719c53a378bb44839759f7946b4bc, type: 3}
   bearPolar: {fileID: 8863418984768501289, guid: 1329f95ac7705d64c9229f2bbac3d21c, type: 3}
+  gm: {fileID: 0}
   waveNumber: 0
   livingBears: 0
   waveCD: 5
