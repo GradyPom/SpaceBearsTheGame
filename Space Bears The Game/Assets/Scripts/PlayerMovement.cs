@@ -112,6 +112,10 @@ public class PlayerMovement : MonoBehaviour
         {
             eText.text = "Fire Rate 5-Increases the player's fire rate a little-50 points";
         }
+        else
+        {
+            eText.text = "Fire Rate Maxed";
+        }
 
         if (r == 1)
         {
@@ -164,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
                 laser.GetComponent<LaserMove>().laserStrength += 5;
                 b += 1;
             }
-            else if (Input.GetKeyDown(KeyCode.E) && gm.GetComponent<GameManager>().points >= (e * 10))
+            else if (Input.GetKeyDown(KeyCode.E) && gm.GetComponent<GameManager>().points >= (e * 10) && e <= 4)
             {
                 gm.GetComponent<GameManager>().points -= (e * 10);
                 laser.GetComponent<LaserMove>().laserCooldown -= 0.2f;
