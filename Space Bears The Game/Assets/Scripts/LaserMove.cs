@@ -46,9 +46,6 @@ public class LaserMove : MonoBehaviour
 
     public void OnCollisonEnter(Collider other)
     {
-        if(other.CompareTag("Ground"))
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
