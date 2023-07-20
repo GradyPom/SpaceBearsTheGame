@@ -105,6 +105,8 @@ MonoBehaviour:
   laserCooldown: 1
   laserSound: {fileID: 8300000, guid: 22b7fa72fd8c8d14e8efb135d4033280, type: 3}
   player: {fileID: 0}
+  laserParticle: {fileID: 3974722133743850445, guid: 2b5280a6344400743ade9fb3d6f6666e, type: 3}
+  gunParticle: {fileID: 3974722133743850445, guid: 2b5280a6344400743ade9fb3d6f6666e, type: 3}
 --- !u!65 &2921004132689713742
 BoxCollider:
   m_ObjectHideFlags: 0
