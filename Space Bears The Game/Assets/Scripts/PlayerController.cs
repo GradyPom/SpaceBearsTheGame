@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float dist;
     public GameObject[] bears;
     public Transform[] bearPositions;
+
+    public TextMeshProUGUI distanceTracker;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +52,7 @@ public class PlayerController : MonoBehaviour
             bearPositions[i] = bears[i].transform;
         }
         GetClosestBear(bearPositions);
+        distanceTracker.text = "Nearest bear: " + dist + "m";
     }
 
     void GetClosestBear(Transform[] bears)
