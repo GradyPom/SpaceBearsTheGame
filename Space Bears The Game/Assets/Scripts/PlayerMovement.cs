@@ -71,26 +71,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (b == 1)
-        {
-            bText.text = "Attack 1-Increases attack damage a little-10 points";
-        }
-        else if (b == 2)
-        {
-            bText.text = "Attack 2-Increases attack damage a little-20 points";
-        }
-        else if (b == 3)
-        {
-            bText.text = "Attack 3-Increases attack damage a little-30 points";
-        }
-        else if (b == 4)
-        {
-            bText.text = "Attack 4-Increases attack damage a little-40 points";
-        }
-        else if (b == 5)
-        {
-            bText.text = "Attack 5-Increases attack damage a little-50 points";
-        }
+        bText.text = "Attack " + b + "-Increases the player's attack a little-" + b + "0 points";
 
         if (e == 1)
         {
