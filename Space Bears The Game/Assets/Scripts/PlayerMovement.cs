@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         upgradeScreen.SetActive(false);
         inGameUI.SetActive(false);
         laser.GetComponent<LaserMove>().laserStrength = 10;
+        laser.GetComponent<LaserMove>().laserCooldown = 1;
         //death.SetActive(false);
     }
 
