@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //death.SetActive(true);
         //DONT DELETE THIS
-        //SceneManager.LoadScene("Death");
+        SceneManager.LoadScene("Death");
     }
 
     //private void OnCollisonEnter(Collision collsion)
