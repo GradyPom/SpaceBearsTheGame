@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.043578748, g: 0.044726565, b: 0.059461884, a: 1}
+  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1219,107 +1219,6 @@ Transform:
   m_Father: {fileID: 2121709545}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &373778959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4269102624875046544, guid: 34ffa1f3bec540648912ba5587ed96e5, type: 3}
-  m_PrefabInstance: {fileID: 575110146}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &373778964
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373778959}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!64 &397323150
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3108,6 +3007,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 756154898385279059, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 756154899369927244, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}
+      propertyPath: m_enableWordWrapping
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8635,12 +8538,12 @@ MonoBehaviour:
   bearBrown: {fileID: 706222839822680995, guid: c96eba82b0e53584fa4f371a6dd49694, type: 3}
   bearBlack: {fileID: 2453350716287686541, guid: 4a3719c53a378bb44839759f7946b4bc, type: 3}
   bearPolar: {fileID: 8863418984768501289, guid: 1329f95ac7705d64c9229f2bbac3d21c, type: 3}
-  bearBlue: {fileID: 0}
-  bearGhost: {fileID: 0}
-  bearCyborg: {fileID: 0}
-  bearGold: {fileID: 0}
-  gm: {fileID: 0}
-  bossSpawn: {fileID: 0}
+  bearBlue: {fileID: 5183346743987216536, guid: 2631fe9b83e72c447bce4dc410f00406, type: 3}
+  bearGhost: {fileID: 5321905353122666256, guid: 1f99324826724e24ea706f05c9ba9191, type: 3}
+  bearCyborg: {fileID: 7738883440666593070, guid: 2d3f8a50d4310ea40b6ef0a985c4ed02, type: 3}
+  bearGold: {fileID: 7455319645427044659, guid: 2d76a58d15162c04891a275ad9b3ad60, type: 3}
+  gm: {fileID: 1254174440}
+  bossSpawn: {fileID: 320079415}
   waveNumber: 0
   livingBears: 0
   waveCD: 5
