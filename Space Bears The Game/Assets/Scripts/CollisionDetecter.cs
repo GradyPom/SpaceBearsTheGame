@@ -11,6 +11,7 @@ public class CollisionDetecter : MonoBehaviour
     private float damageDone = 0;
     public float health = 20;
     public float value = 1;
+    private float count = 0;
     public GameObject laserPrefab;
     public float laserStrength;
     public float attackAnimation;
@@ -64,7 +65,11 @@ public class CollisionDetecter : MonoBehaviour
             {
                 GetComponent<Animator>().SetBool("Death", true);
                 StartCoroutine(DeathAnimation());
-                FindObjectOfType<SpawnManager>().livingBears--;
+                if (count == 0)
+                {
+                    FindObjectOfType<SpawnManager>().livingBears--;
+                    count++;
+                }
             }
             else
             {
@@ -90,5 +95,6 @@ public class CollisionDetecter : MonoBehaviour
         yield return new WaitForSeconds(5);
         gm.GetComponent<GameManager>().points += value;
         Destroy(gameObject);
+        count = 0;
     }
 }

@@ -2144,7 +2144,7 @@ GameObject:
   - component: {fileID: 802645478727396917}
   m_Layer: 0
   m_Name: PolarBear
-  m_TagString: Untagged
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2158,7 +2158,7 @@ Transform:
   m_GameObject: {fileID: 8863418984768501289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 5, z: -2.343}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 935118582127262733}
@@ -2200,6 +2200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  speed: 10
   controller: {fileID: 802645478727396917}
   gravity: -9.81
   bear: {fileID: 8863418984768501289}
@@ -2261,8 +2262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
-  health: 20
-  value: 1
+  health: 50
+  value: 10
   laserPrefab: {fileID: 8357108402137456105, guid: 4207a279fb030fc409a8d313c3f0fed3, type: 3}
   laserStrength: 0
   attackAnimation: 0

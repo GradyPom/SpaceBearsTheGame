@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         upgradeScreen.SetActive(false);
         inGameUI.SetActive(false);
         laser.GetComponent<LaserMove>().laserStrength = 10;
+        laser.GetComponent<LaserMove>().laserCooldown = 1;
         //death.SetActive(false);
     }
 
@@ -160,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.B) && gm.GetComponent<GameManager>().points >= (b * 10))
             {
                 gm.GetComponent<GameManager>().points -= (b * 10);
-                laser.GetComponent<LaserMove>().laserStrength += 2;
+                laser.GetComponent<LaserMove>().laserStrength += 5;
                 b += 1;
             }
             else if (Input.GetKeyDown(KeyCode.E) && gm.GetComponent<GameManager>().points >= (e * 10))

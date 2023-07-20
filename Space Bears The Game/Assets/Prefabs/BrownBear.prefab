@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 785900599269474855}
   m_Layer: 0
   m_Name: BrownBear
-  m_TagString: Untagged
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  speed: 8
   controller: {fileID: 785900599269474855}
   gravity: -9.81
   bear: {fileID: 706222839822680995}
@@ -249,7 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   health: 20
-  value: 1
+  value: 2
   laserPrefab: {fileID: 8357108402137456105, guid: 4207a279fb030fc409a8d313c3f0fed3, type: 3}
   laserStrength: 0
   attackAnimation: 0

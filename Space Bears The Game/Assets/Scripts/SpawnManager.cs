@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject bearBrown;
     public GameObject bearBlack;
     public GameObject bearPolar;
+    public GameManager gm;
 
     public int waveNumber = 0;
     public int livingBears = 0;
@@ -20,6 +21,7 @@ public class SpawnManager : MonoBehaviour
         Physics.bounceThreshold = 2;
 
         currentWaveCD = waveCD;
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class SpawnManager : MonoBehaviour
             if (currentWaveCD <= 0)
             {
                 waveNumber += 1;
+                gm.EndOfWave();
                 spawnWave(waveNumber);
                 currentWaveCD = waveCD;
             }
@@ -43,7 +46,7 @@ public class SpawnManager : MonoBehaviour
     {
         if (num == 1)
         {
-            for (int i = 1 ; i<=3; i++)
+            for (int i = 1 ; i <= 3; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0,spawnLocations.Count)].transform.position,bearBlack.transform.rotation);
             }
@@ -51,7 +54,7 @@ public class SpawnManager : MonoBehaviour
 
         if (num == 2)
         {
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= 1; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }

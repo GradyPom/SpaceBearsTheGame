@@ -31,6 +31,14 @@ public class GameManager : MonoBehaviour
         isGameActive = true;
     }
 
+    public void EndOfWave()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            lifeBar[i].gameObject.SetActive(true);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
