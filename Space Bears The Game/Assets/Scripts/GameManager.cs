@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
             player.GetComponent<PlayerMovement>().deathStatus = true;
         }
 
-        pointsText.text = "Points: " + points;
+        pointsText.text = "Parts: " + points;
     }
 
     public void LoseHealth()
