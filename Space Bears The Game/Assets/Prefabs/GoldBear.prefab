@@ -1915,7 +1915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 1
+  speed: 15
   controller: {fileID: 7229271599004045495}
   gravity: -9.81
   bear: {fileID: 7455319645427044659}
