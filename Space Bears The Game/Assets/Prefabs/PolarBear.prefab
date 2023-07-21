@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserGun: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
-  laserPrefab: {fileID: 5998837902287164984, guid: c96067b356105a3428101a672f2df3c2, type: 3}
+  laserPrefab: {fileID: 4082848383852137626, guid: 9e0efb2cea2423f4d84b0f2cf333b2a4, type: 3}
   cooldown: 0
   laserShot: 0
   player: {fileID: 0}
@@ -2265,10 +2265,11 @@ MonoBehaviour:
   gm: {fileID: 0}
   health: 150
   value: 10
-  laserPrefab: {fileID: 5998837902287164984, guid: c96067b356105a3428101a672f2df3c2, type: 3}
+  laserPrefab: {fileID: 4082848383852137626, guid: 9e0efb2cea2423f4d84b0f2cf333b2a4, type: 3}
   laserStrength: 0
   attackAnimation: 0
   runAnimationHolder: 0
+  roarPlayer: {fileID: 0}
 --- !u!143 &802645478727396917
 CharacterController:
   m_ObjectHideFlags: 0

@@ -20,9 +20,11 @@ public class PlayerMovement : MonoBehaviour
     public float b = 1;
     public float e = 1;
     public float r = 1;
+    public float h = 1;
     public TextMeshProUGUI bText;
     public TextMeshProUGUI eText;
     public TextMeshProUGUI rText;
+    public TextMeshProUGUI hText;
     //public GameObject death;
     //public bool isOnGround;
     //public float jumpForce = 20;
@@ -74,7 +76,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         bText.text = "Attack " + b + "-Increases the player's attack a little-" + b + "0 points";
-        
+
+        hText.text = "Press P to spend " + h + "00 points to heal in the middle of a wave.";
 
         if (e == 1)
         {
@@ -146,9 +149,10 @@ public class PlayerMovement : MonoBehaviour
                 r += 1;
                 upgradePlayer.Play();
             }
-            else if (Input.GetKeyDown(KeyCode.P) && gm.GetComponent<GameManager>().points >= 100)
+            else if (Input.GetKeyDown(KeyCode.P) && gm.GetComponent<GameManager>().points >= (h * 100))
             {
                 gm.StartGame();
+                gm.GetComponent<GameManager>().points -= (h * 100);
             }
         }
 
