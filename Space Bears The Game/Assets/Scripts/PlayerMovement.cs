@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         bText.text = "Attack " + b + "-Increases the player's attack a little-" + b + "0 points";
+        
 
         if (e == 1)
         {
@@ -94,7 +95,9 @@ public class PlayerMovement : MonoBehaviour
             eText.text = "Fire Rate Maxed";
         }
 
+
         rText.text = "Speed " + r + "-Increases the player's speed a little-" + r + "0 points";
+        
 
         if (gm.GetComponent<GameManager>().isGameActive && upgradeScreenOpen == true)
         {
@@ -137,6 +140,10 @@ public class PlayerMovement : MonoBehaviour
                 gm.GetComponent<GameManager>().points -= (r * 10);
                 speed += 2;
                 r += 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.P) && gm.GetComponent<GameManager>().points >= 100)
+            {
+                gm.StartGame();
             }
         }
 

@@ -2263,7 +2263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
-  health: 100
+  health: 150
   value: 10
   laserPrefab: {fileID: 5998837902287164984, guid: c96067b356105a3428101a672f2df3c2, type: 3}
   laserStrength: 0

@@ -43,7 +43,7 @@ public class CollisionDetecter : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && damageDone == 0)
+        if (other.CompareTag("Player") && damageDone == 0 && health > 0)
         {
             attackAnimation = Random.Range(1, 5);
             if(attackAnimation == 4)

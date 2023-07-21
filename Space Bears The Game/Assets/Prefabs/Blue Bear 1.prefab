@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 14
+  speed: 15
   controller: {fileID: 4957310792376934684}
   gravity: -9.81
   bear: {fileID: 5183346743987216536}
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
-  health: 70
+  health: 200
   value: 20
   laserPrefab: {fileID: 5998837902287164984, guid: c96067b356105a3428101a672f2df3c2, type: 3}
   laserStrength: 0

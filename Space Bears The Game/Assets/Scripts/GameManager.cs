@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
             lifeBar[i].gameObject.SetActive(true);
         }
         isGameActive = true;
+        health = 10;
     }
 
     public void EndOfWave()
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
         {
             lifeBar[i].gameObject.SetActive(true);
         }
+        health = 10;
     }
 
     // Update is called once per frame

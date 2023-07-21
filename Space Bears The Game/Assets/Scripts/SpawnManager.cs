@@ -112,18 +112,18 @@ public class SpawnManager : MonoBehaviour
         }
         else if (num == 7)
         {
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= 4; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
         }
         else if (num == 8)
         {
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -138,7 +138,7 @@ public class SpawnManager : MonoBehaviour
         }
         else if (num == 9)
         {
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 8; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -157,7 +157,7 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= 4; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -168,7 +168,7 @@ public class SpawnManager : MonoBehaviour
         }
         else if (num == 11)
         {
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -191,7 +191,7 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 1; i++)
+            for (int i = 1; i <= 4; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -214,11 +214,11 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 2; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= 2; i++)
             {
                 Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -233,7 +233,7 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= 4; i++)
             {
                 Instantiate(bearBlue, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -244,7 +244,7 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 2; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -259,11 +259,11 @@ public class SpawnManager : MonoBehaviour
         }
         else if (num == 15)
         {
-            for (int i = 1; i <= 6; i++)
+            for (int i = 1; i <= 6; i++) 
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 1; i++)
+            for (int i = 1; i <= 4; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -286,7 +286,7 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 1; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 Instantiate(bearPolar, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -301,11 +301,11 @@ public class SpawnManager : MonoBehaviour
         }
         else if (num == 17)
         {
-            for (int i = 1; i <= 12; i++)
+            for (int i = 1; i <= 16; i++)
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 4; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -324,7 +324,7 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 4; i++)
+            for (int i = 1; i <= 8; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -347,7 +347,7 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearBrown, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 1; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 Instantiate(bearBlack, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
@@ -478,14 +478,14 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearGhost, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 15; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
         }
         else if (num == 25)
         {
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
