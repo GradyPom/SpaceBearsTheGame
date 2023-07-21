@@ -17,12 +17,15 @@ public class CollisionDetecter : MonoBehaviour
     public float attackAnimation;
     public float runAnimationHolder;
 
+    public AudioSource roarPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         laserStrength = laserPrefab.GetComponent<LaserMove>().laserStrength;
         runAnimationHolder = 0;
         gm = FindObjectOfType<GameManager>();
+        roarPlayer = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -102,6 +105,7 @@ public class CollisionDetecter : MonoBehaviour
     }
     IEnumerator DeathAnimation()
     {
+        roarPlayer.Stop();
         yield return new WaitForSeconds(5);
         gm.GetComponent<GameManager>().points += value;
         Destroy(gameObject);

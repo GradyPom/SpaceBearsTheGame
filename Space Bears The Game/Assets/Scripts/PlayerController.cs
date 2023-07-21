@@ -5,8 +5,8 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    private float verticalInput;
-    private float horizontalInput;
+    //private float verticalInput;
+    //private float horizontalInput;
     public int speed = 10;
     public int turnSpeed = 15;
     public float mouseSensitivity = 100;
@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshProUGUI distanceTracker;
 
+    public AudioSource footstepPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +34,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        verticalInput = Input.GetAxis("Vertical");
-        horizontalInput = Input.GetAxis("Horizontal");
+        //verticalInput = Input.GetAxis("Vertical");
+        //horizontalInput = Input.GetAxis("Horizontal");
         //transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
         //transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -53,6 +55,15 @@ public class PlayerController : MonoBehaviour
         }
         GetClosestBear(bearPositions);
         distanceTracker.text = "Nearest bear: " + dist + "m";
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            footstepPlayer.mute = false;
+        }
+        else
+        {
+            footstepPlayer.mute = true;
+        }
     }
 
     void GetClosestBear(Transform[] bears)
