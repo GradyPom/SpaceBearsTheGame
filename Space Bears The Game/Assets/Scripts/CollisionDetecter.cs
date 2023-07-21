@@ -16,6 +16,7 @@ public class CollisionDetecter : MonoBehaviour
     public float laserStrength;
     public float attackAnimation;
     public float runAnimationHolder;
+    public GameObject explosionParticle;
 
     public AudioSource roarPlayer;
 
@@ -103,6 +104,7 @@ public class CollisionDetecter : MonoBehaviour
         gm.GetComponent<GameManager>().points += value;
         yield return new WaitForSeconds(5);
         FindObjectOfType<SpawnManager>().livingBears--;
+        Instantiate(explosionParticle, transform.position, transform.rotation);
         Destroy(gameObject);
         count = 0;
     }

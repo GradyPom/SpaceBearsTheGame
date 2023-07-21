@@ -33,14 +33,13 @@ public class SpawnManager : MonoBehaviour
 
         currentWaveCD = waveCD;
         gm = FindObjectOfType<GameManager>();
-        bossSpawn = GameObject.Find("Boss Spawn Loctaion");
 
         soundPlayed = false;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         if (livingBears == 0)
         {
             if (!(waveNumber == 0) && !soundPlayed)
@@ -500,10 +499,8 @@ public class SpawnManager : MonoBehaviour
             {
                 Instantiate(bearCyborg, spawnLocations[Random.Range(0, spawnLocations.Count)].transform.position, bearBlack.transform.rotation);
             }
-            for (int i = 1; i <= 1; i++)
-            {
-                Instantiate(bearGold, bossSpawn.transform.position, bearBlack.transform.rotation);
-            }
+
+            Instantiate(bearGold, bossSpawn.transform.position, bearBlack.transform.rotation);
         }
     }
 }   
