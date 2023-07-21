@@ -35,11 +35,9 @@ public class CollisionDetecter : MonoBehaviour
 
         if (gameObject.transform.position.y <= 1)
         {
-            StartCoroutine(DeathAnimation());
             if (count == 0)
             {
-                FindObjectOfType<SpawnManager>().livingBears--;
-                count++;
+                StartCoroutine(DeathAnimation());
             }
         }
     }
@@ -78,11 +76,6 @@ public class CollisionDetecter : MonoBehaviour
             {
                 GetComponent<Animator>().SetBool("Death", true);
                 StartCoroutine(DeathAnimation());
-                if (count == 0)
-                {
-                    FindObjectOfType<SpawnManager>().livingBears--;
-                    count++;
-                }
             }
             else
             {
@@ -106,8 +99,10 @@ public class CollisionDetecter : MonoBehaviour
     IEnumerator DeathAnimation()
     {
         roarPlayer.Stop();
-        yield return new WaitForSeconds(5);
+        count++;
         gm.GetComponent<GameManager>().points += value;
+        yield return new WaitForSeconds(5);
+        FindObjectOfType<SpawnManager>().livingBears--;
         Destroy(gameObject);
         count = 0;
     }

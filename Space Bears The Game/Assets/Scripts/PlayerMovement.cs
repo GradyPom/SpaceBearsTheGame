@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     //public float jumpForce = 20;
     //public Rigidbody playerRb;
 
+    public AudioSource upgradePlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -128,18 +130,21 @@ public class PlayerMovement : MonoBehaviour
                 gm.GetComponent<GameManager>().points -= (b * 10);
                 laser.GetComponent<LaserMove>().laserStrength += 5;
                 b += 1;
+                upgradePlayer.Play();
             }
             else if (Input.GetKeyDown(KeyCode.E) && gm.GetComponent<GameManager>().points >= (e * 10) && e <= 4)
             {
                 gm.GetComponent<GameManager>().points -= (e * 10);
                 laser.GetComponent<LaserMove>().laserCooldown -= 0.2f;
                 e += 1;
+                upgradePlayer.Play();
             }
             else if (Input.GetKeyDown(KeyCode.R) && gm.GetComponent<GameManager>().points >= (r * 10))
             {
                 gm.GetComponent<GameManager>().points -= (r * 10);
                 speed += 2;
                 r += 1;
+                upgradePlayer.Play();
             }
             else if (Input.GetKeyDown(KeyCode.P) && gm.GetComponent<GameManager>().points >= 100)
             {

@@ -23,6 +23,9 @@ public class SpawnManager : MonoBehaviour
     public float waveCD = 5;
     public float currentWaveCD;
 
+    public AudioSource wavePlayer;
+    public bool soundPlayed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,8 @@ public class SpawnManager : MonoBehaviour
         currentWaveCD = waveCD;
         gm = FindObjectOfType<GameManager>();
         bossSpawn = GameObject.Find("Boss Spawn Loctaion");
+
+        soundPlayed = false;
     }
 
     // Update is called once per frame
@@ -38,6 +43,11 @@ public class SpawnManager : MonoBehaviour
     {
         if (livingBears == 0)
         {
+            if (!(waveNumber == 0) && !soundPlayed)
+            {
+                wavePlayer.Play();
+                soundPlayed = true;
+            }
             currentWaveCD -= Time.deltaTime;
 
             if (currentWaveCD <= 0)
@@ -46,6 +56,7 @@ public class SpawnManager : MonoBehaviour
                 gm.EndOfWave();
                 spawnWave(waveNumber);
                 currentWaveCD = waveCD;
+                soundPlayed = false;
             }
 
         }
