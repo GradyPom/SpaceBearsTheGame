@@ -3599,8 +3599,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 756154899369927244, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}
+      propertyPath: m_text
+      value: 'Parts:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 756154899369927244, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}
       propertyPath: m_enableWordWrapping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 756154899369927245, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}
+      propertyPath: m_Name
+      value: Parts
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bdf55b71a8227645952019cbe7b8a86, type: 3}

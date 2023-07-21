@@ -75,25 +75,25 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        bText.text = "Attack " + b + "-Increases the player's attack a little-" + b + "0 points";
+        bText.text = "Attack " + b + "-Increases the player's attack a little-" + b + "0 parts";
 
-        hText.text = "Press P to spend " + h + "00 points to heal in the middle of a wave.";
+        hText.text = "Press P to spend " + h + "00 parts to heal in the middle of a wave.";
 
         if (e == 1)
         {
-            eText.text = "Fire Rate 1-Increases the player's fire rate a little-10 points";
+            eText.text = "Fire Rate 1-Increases the player's fire rate a little-10 parts";
         }
         else if (e == 2)
         {
-            eText.text = "Fire Rate 2-Increases the player's fire rate a little-20 points";
+            eText.text = "Fire Rate 2-Increases the player's fire rate a little-20 parts";
         }
         else if (e == 3)
         {
-            eText.text = "Fire Rate 3-Increases the player's fire rate a little-30 points";
+            eText.text = "Fire Rate 3-Increases the player's fire rate a little-30 parts";
         }
         else if (e == 4)
         {
-            eText.text = "Fire Rate 4-Increases the player's fire rate a little-40 points";
+            eText.text = "Fire Rate 4-Increases the player's fire rate a little-40 parts";
         }
         else
         {
@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        rText.text = "Speed " + r + "-Increases the player's speed a little-" + r + "0 points";
+        rText.text = "Speed " + r + "-Increases the player's speed a little-" + r + "0 parts";
         
 
         if (gm.GetComponent<GameManager>().isGameActive && upgradeScreenOpen == true)
