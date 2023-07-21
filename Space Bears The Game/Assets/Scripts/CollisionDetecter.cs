@@ -105,6 +105,10 @@ public class CollisionDetecter : MonoBehaviour
         yield return new WaitForSeconds(5);
         FindObjectOfType<SpawnManager>().livingBears--;
         Instantiate(explosionParticle, transform.position, transform.rotation);
+        if (gameObject.name == "GoldBear(Clone)")
+        {
+            SceneManager.LoadScene("Win");
+        }
         Destroy(gameObject);
         count = 0;
     }

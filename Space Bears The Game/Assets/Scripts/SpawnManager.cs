@@ -35,6 +35,8 @@ public class SpawnManager : MonoBehaviour
         gm = FindObjectOfType<GameManager>();
 
         soundPlayed = false;
+
+        Instantiate(bearGold, bossSpawn.transform.position, bearBlack.transform.rotation);
     }
 
     // Update is called once per frame
